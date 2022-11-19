@@ -26,21 +26,6 @@
 }
 
 @layer components {
-  .sign-container {
-    position: relative;
-    width: 22rem;
-    height: 30rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: url(./images/bg-pentagon.svg) no-repeat center center;
-    background-size: 340px;
-    -webkit-background-size: 340px;
-    -moz-background-size: 340px;
-    -o-background-size: 340px;
-  }
-
   .sign-container > div {
     position: absolute;
   }
@@ -87,14 +72,6 @@
   }
 
   @media screen and (max-width: 639px) {
-    .sign-container {
-      background-size: 220px;
-      -webkit-background-size: 220px;
-      -moz-background-size: 220px;
-      -o-background-size: 220px;
-      background-size: 220px;
-    }
-
     .sign-container > div:first-of-type{
       bottom: 20%;
       right: 17%;

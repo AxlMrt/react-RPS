@@ -27,7 +27,7 @@ function Sign({ sign, handleClick, getPlayerChoice }) {
     <Selection>
       <img src={sign.url} alt="" onClick={playerChoice} className="cursor-pointer sm:w-8"/>
     </Selection>
-  )
+  );
 }
 
 export default Sign;
