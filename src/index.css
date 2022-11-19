@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html{
+    font-family: Barlow Semi Condensed;
+    background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%)) no-repeat fixed;
+    background-size: cover;
+    text-transform: uppercase;
+    color: white;
+  }
+
+  li{
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: .8;
+  }
+
+  @media screen and (max-width: 639px) {
+    li {
+      font-size: .8rem;
+    }
+  }
+}
+
+@layer components {
+  .sign-container {
+    position: relative;
+    width: 22rem;
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url(./images/bg-pentagon.svg) no-repeat center center;
+    background-size: 340px;
+    -webkit-background-size: 340px;
+    -moz-background-size: 340px;
+    -o-background-size: 340px;
+  }
+
+  .sign-container > div {
+    position: absolute;
+  }
+
+  .sign-container > div:first-of-type{
+    bottom: 0;
+    right: 0;
+  }
+
+  .sign-container > div:nth-of-type(2){
+    right: -15%;
+    top: 25%;
+  }
+
+  .sign-container > div:nth-of-type(3){
+    top: 0;
+  }
+
+  .sign-container > div:nth-of-type(4){
+    bottom: 0;
+    left: 0;
+  }
+
+  .sign-container > div:last-of-type{
+    left: -15%;
+    top: 25%;
+  }
+
+  .selector{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    padding: 5rem 1.25rem;
+  }
+
+  .selector-text{
+    position: absolute;
+    top: 0;
+    font-size: 1.5rem;
+    letter-spacing: 0.1em;
+  }
+
+  @media screen and (max-width: 639px) {
+    .sign-container {
+      background-size: 220px;
+      -webkit-background-size: 220px;
+      -moz-background-size: 220px;
+      -o-background-size: 220px;
+      background-size: 220px;
+    }
+
+    .sign-container > div:first-of-type{
+      bottom: 20%;
+      right: 17%;
+    }
+  
+    .sign-container > div:nth-of-type(2){
+      right: 6%;
+      top: 34%;
+    }
+  
+    .sign-container > div:nth-of-type(3){
+      top: 16%;
+    }
+  
+    .sign-container > div:nth-of-type(4){
+      bottom: 20%;
+      left: 17%;
+    }
+  
+    .sign-container > div:last-of-type{
+      left: 6%;
+      top: 34%;
+    }
+
+    .selector{
+      margin-top: 5rem;
+      padding: 1rem 2rem;
+    }
+
+    .selector-text {
+      font-size: 1rem;
+      top: 10rem;
+    }
+  }
+}
