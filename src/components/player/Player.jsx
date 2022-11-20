@@ -2,7 +2,7 @@ import Sign from "./Sign";
 import styled from 'styled-components';
 import pentagon from "./bg-pentagon.svg";
 
-function Player({ data, handleClick, getPlayerChoice }) {
+function Player({ data, handleClick, getPlayerChoice, appearTime }) {
   const SignContainer = styled.div`
     position: relative;
     width: 22rem;
@@ -26,7 +26,7 @@ function Player({ data, handleClick, getPlayerChoice }) {
   `;
 
   return (
-    <div className="w-full flex items-center justify-center mt-12 sm:mt-4" >
+    <div className="w-full flex items-center justify-center mt-12 sm:mt-4">
       <SignContainer className="sign-container">
         {
           data.map((sign, idx) => (
@@ -35,6 +35,7 @@ function Player({ data, handleClick, getPlayerChoice }) {
                 sign={sign}
                 handleClick={handleClick}
                 getPlayerChoice={getPlayerChoice}
+                appearTime={appearTime}
               />
             </div>
           ))

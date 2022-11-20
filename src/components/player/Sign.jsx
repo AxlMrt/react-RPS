@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-function Sign({ sign, handleClick, getPlayerChoice }) {
+function Sign({ sign, handleClick, getPlayerChoice, appearTime }) {
   const Selection = styled.div`
     width: 9rem;
     height: 9rem;
@@ -21,6 +21,7 @@ function Sign({ sign, handleClick, getPlayerChoice }) {
   function playerChoice() {
     handleClick();
     getPlayerChoice(sign);
+    appearTime();
   }
 
   return (

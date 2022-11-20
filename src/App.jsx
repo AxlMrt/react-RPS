@@ -8,6 +8,7 @@ function App() {
   const [computerChoice, setComputerChoice] = React.useState("");
   const [playerChoice, setPlayerChoice] = React.useState("");
   const [isWin, setIsWin] = React.useState("");
+  const [display, setDisplay] = React.useState('none');
 
   function getComputerChoice() {
     const random = Math.floor(Math.random()*data.length);
@@ -18,10 +19,15 @@ function App() {
     setPlayerChoice(choice);
   }
 
+  function appearTime(){
+    setTimeout(() => setDisplay('flex'), 2000);
+  }
+
   function resetGame() {
     setPlayerChoice("");
     setComputerChoice("");
     setIsWin("");
+    setDisplay('none');
   }
 
   React.useEffect(() => {
@@ -66,6 +72,8 @@ function App() {
         playerChoice={playerChoice}
         resetGame={resetGame}
         isWin={isWin}
+        display={display}
+        appearTime={appearTime}
       />
     </div>
   );

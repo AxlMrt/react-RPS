@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Sign from './Sign';
 
-function Computer({ data }) {
+function Computer({ data, isWin, display }) {
   const CSelect = styled.div`
     width: 18rem;
     height: 18rem;
@@ -25,8 +25,8 @@ function Computer({ data }) {
   `;
 
   return (
-    <div style={data === "" ? {display: 'none'} : {display: 'block'}}>
-      <CSelect>
+    <div style={data === "" ? {display: 'none', opacity: 0} : {display: 'block'}}>
+      <CSelect className={`${isWin === "You lose" && display === "flex" ? "ping" : ""}`}>
         <Sign data={data} />
       </CSelect>
     </div>

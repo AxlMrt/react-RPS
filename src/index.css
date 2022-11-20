@@ -6,7 +6,7 @@
 @layer base {
   html{
     font-family: Barlow Semi Condensed;
-    background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%)) no-repeat fixed;
+    background: radial-gradient(circle, hsl(214, 47%, 23%) 0%, hsl(237, 49%, 15%) 100%);
     background-size: cover;
     text-transform: uppercase;
     color: white;
@@ -71,6 +71,32 @@
     letter-spacing: 0.1em;
   }
 
+  .ping {
+    animation: ping 2.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  @keyframes ping {
+    75%, 100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+
+  .appear {
+    animation: fade-in 2s forwards;
+  }
+
+  @keyframes fade-in {
+    0% {
+      opacity:0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  
   @media screen and (max-width: 639px) {
     .sign-container > div:first-of-type{
       bottom: 20%;
